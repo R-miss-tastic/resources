@@ -1,0 +1,1 @@
+grep "  Topics" rmisstastic_biblio.bib | cut -d '{' -f 2 | cut -d '}' -f 1 | sed -e "s/; /\n/g" -e "s/},//" | sort | uniq -c | sort -n
